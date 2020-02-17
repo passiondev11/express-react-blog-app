@@ -55,6 +55,7 @@ export const remove_profile = () => {
   }
 }
 
+
 export const set_db_profile = (profile) => {
   return {
     type: ACTION_TYPES.SET_DB_PROFILE,
@@ -81,15 +82,89 @@ export const remove_db_posts = () => {
   }
 }
 
-export const fetch_posts_comments = () => {
+
+export const fetch_post_comments = (comments) => {
   return {
-    type: ACTION_TYPES.FETCH_POSTS_COMMENTS
+    type: ACTION_TYPES.FETCH_POST_COMMENTS,
+    payload: comments
   }
 }
 
-export const remove_posts_comments = (comments) => {
+export const remove_post_comments = () => {
   return {
-    type: ACTION_TYPES.REMOVE_POSTS_COMMENTS,
-    payload: comments
+    type: ACTION_TYPES.REMOVE_POST_COMMENTS
+  }
+}
+
+
+
+export const fetch_user_posts = (posts) => {
+  return {
+    type: ACTION_TYPES.FETCH_USER_POSTS,
+    payload: posts
+  }
+}
+
+export const remove_user_posts = () => {
+  return {
+    type: ACTION_TYPES.REMOVE_USER_POSTS
+  }
+}
+
+export const fetch_search_posts = (posts) => {
+  return {
+    type: ACTION_TYPES.SEARCH_POSTS_SUCCESS,
+    payload: posts
+  }
+}
+
+export const remove_search_posts = () => {
+  return {
+    type: ACTION_TYPES.SEARCH_POSTS_FAILURE
+  }
+}
+
+
+//Get posts from the db based on user id of another user
+export function get_other_user_db_posts(posts) {
+  return {
+    type: ACTION_TYPES.FETCH_OTHER_USER_DB_POSTS_SUCCESS,
+    payload: posts
+  }
+}
+
+export function remove_other_user_db_posts() {
+  return {
+      type: ACTION_TYPES.REMOVE_OTHER_USER_DB_POSTS
+  }
+}
+
+
+//Actions for rendering profile info of another user
+export function set_other_user_db_profile(profile) {
+  return {
+    type: ACTION_TYPES.SET_OTHER_USER_DB_PROFILE,
+    payload: profile
+  }
+}
+
+export function remove_other_user_db_profile() {
+  return {
+      type: ACTION_TYPES.REMOVE_OTHER_USER_DB_PROFILE
+  }
+}
+
+
+//Actions for setting users messages
+export function set_user_messages(messages) {
+  return {
+    type: ACTION_TYPES.SET_USER_MESSAGES,
+    payload: messages
+  }
+}
+
+export function remove_user_messages() {
+  return {
+    type: ACTION_TYPES.REMOVE_USER_MESSAGES
   }
 }
