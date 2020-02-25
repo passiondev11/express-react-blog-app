@@ -29,6 +29,9 @@ class Header extends Component {
           <Link to='/privateroute' style={{padding: '5px'}}>
             Private Route
           </Link>
+          <Link to='/words' style={{padding: '5px'}}>
+            Words
+          </Link>
           {!this.props.is_authenticated
             ? <button onClick={() => this.props.auth.login()}>Login</button>
             : <button onClick={() => this.props.auth.logout()}>Logout</button>

@@ -37,3 +37,11 @@ CREATE TABLE messages (
   message_body VARCHAR,
   date_created TIMESTAMP
 );
+
+
+CREATE TABLE words (
+  wid SERIAL PRIMARY KEY,
+  word VARCHAR(255),
+  content VARCHAR,
+  date_created TIMESTAMP
+);
