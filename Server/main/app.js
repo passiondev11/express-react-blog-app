@@ -7,9 +7,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes')
 
 
-
-
-
 var app = express();
 
 

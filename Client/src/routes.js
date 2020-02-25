@@ -21,6 +21,11 @@ import AddPost from './Blog/addpost';
 import ShowPost from './Blog/showpost';
 import EditPost from './Blog/editpost';
 
+import Words from './Words/words';
+//import AddWord from './Words/addword';
+//import ShowWord from './Words/showword';
+//import EditWord from './Words/editword';
+
 import ShowUser from './Profile/showuser';
 import SendMessage from './Profile/sendmessage';
 import ShowMessages from './Profile/showmessages';
@@ -100,6 +105,8 @@ class Routes extends Component {
 
             <PrivateRoute path="/privateroute" auth={auth} component={PrivateComponent} />
             <PrivateRoute path="/profile" auth={auth} component={Profile} />
+
+            <Route path='/words' component={Words} />
 
           </Switch>
         </div>
