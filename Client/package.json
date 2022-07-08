@@ -9,7 +9,7 @@
     "auth0-js": "^9.8.2",
     "axios": "^0.18.0",
     "history": "^4.7.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-js-pagination": "^3.0.2",
